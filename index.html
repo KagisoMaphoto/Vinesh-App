@@ -5,8 +5,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vinesh App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Vinesh App</title>
   </head>
   <body>
     <div class="weather-app">
@@ -14,6 +20,7 @@
         <form class="search-form" id="search-form">
           <input
             type="search"
+            id="search-form-input"
             placeholder="Enter a city.."
             required
             class="search-form-input" />
@@ -22,16 +29,17 @@
       </header>
       <main>
         <div class="weather-app-data">
-          <h1 class="weather-app-city" id="city">Pretoria</h1>
+          <h1 class="weather-app-city" id="city"></h1>
           <p class="weather-app-details">
-            Tuesday 14:49, scattered clouds
+            Friday 14:49, scattered clouds
             <br />
             Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
           </p>
         </div>
         <div class="weather-app-temperature-container">
           <span class="weather-app-icon">🌤️</span>
-          <span class="weather-app-temperature">12°C</span>
+          <span class="weather-app-temperature" id="temperature"></span>
+          <span class="weather-app-unit"> °C </span>
         </div>
       </main>
       <footer>
